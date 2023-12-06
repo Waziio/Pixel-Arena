@@ -6,10 +6,18 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 const router = createBrowserRouter([{ path: "/", element: <Signin></Signin> }]);
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        backgroundColor: '#303030',
+        color: "white"
+      }
+    }
+  },
   colors: {
     primary: "#EF946C",
-    secondary: "#FFFFFF",
-    third: "#303030",
+    secondary: "#303030",
+    third: "#FFFFFF",
   },
 });
 

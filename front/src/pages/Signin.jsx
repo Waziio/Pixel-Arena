@@ -10,7 +10,7 @@ export default function Signin() {
         <div id="right" className="w-1/2 flex justify-center items-center">
           <div id="login-container" className="h-3/4 w-full flex flex-col items-center">
             <div id="login-title-container" className="w-full h-1/4 flex justify-center items-center">
-              <h1 className="text-5xl font-light">Connexion</h1>
+              <h1 className="text-6xl font-light">Connexion</h1>
             </div>
 
             <div id="form-container" className="h-2/4 w-2/5 flex flex-col gap-10 justify-center">
@@ -25,12 +25,12 @@ export default function Signin() {
 
             <div id="footer" className="h-1/4 w-full flex flex-col items-center mt-6">
               <div id="btn-container" className="h-20 flex justify-center items-center">
-                <Button size={"lg"} rightIcon={<span className="material-symbols-outlined">login</span>} bg={"primary"} _hover={{opacity: 0.8}}>
+                <Button fontSize={"large"} size={"lg"} rightIcon={<span className="material-symbols-outlined">login</span>} bg={"primary"} _hover={{opacity: 0.8}}>
                   Se connecter 
                 </Button>
               </div>
 
-              <div id="signup" className="h-20 flex justify-center items-center">
+              <div id="signup" className="h-20 flex justify-center items-center text-lg">
                 <p>
                   Pas de compte ? <span className="text-primary font-semibold cursor-pointer underline underline-offset-4 hover:underline-offset-8 transition-all duration-200">Crééz en un</span>
                 </p>
