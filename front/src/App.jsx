@@ -2,17 +2,21 @@ import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Signin from "./pages/Signin";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { Signup } from "./pages/Signup";
 
-const router = createBrowserRouter([{ path: "/", element: <Signin></Signin> }]);
+const router = createBrowserRouter([
+  { path: "/signin", element: <Signin></Signin> },
+  { path: "/signup", element: <Signup></Signup> },
+]);
 
 const theme = extendTheme({
   styles: {
     global: {
       body: {
-        backgroundColor: '#303030',
-        color: "white"
-      }
-    }
+        backgroundColor: "#303030",
+        color: "white",
+      },
+    },
   },
   colors: {
     primary: "#EF946C",
@@ -20,7 +24,6 @@ const theme = extendTheme({
     third: "#FFFFFF",
   },
 });
-
 
 function App() {
   return (

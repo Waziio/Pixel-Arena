@@ -1,6 +1,7 @@
 import { Button } from "@chakra-ui/react";
 import LeftBlock from "../components/Auth/LeftBlock";
 import MyInput from "../components/MyInput";
+import { Link } from "react-router-dom";
 
 export default function Signin() {
   return (
@@ -23,16 +24,16 @@ export default function Signin() {
               </div>
             </div>
 
-            <div id="footer" className="h-1/4 w-full flex flex-col items-center mt-6">
+            <div id="footer" className="h-1/4 w-full flex flex-col items-center justify-around mt-6">
               <div id="btn-container" className="h-20 flex justify-center items-center">
-                <Button fontSize={"large"} size={"lg"} rightIcon={<span className="material-symbols-outlined">login</span>} bg={"primary"} _hover={{opacity: 0.8}}>
-                  Se connecter 
+                <Button fontSize={"large"} size={"lg"} rightIcon={<span className="material-symbols-outlined">login</span>} bg={"primary"} _hover={{ opacity: 0.8 }}>
+                  Se connecter
                 </Button>
               </div>
 
-              <div id="signup" className="h-20 flex justify-center items-center text-lg">
+              <div id="signup" className="h-20 flex justify-center items-end text-lg">
                 <p>
-                  Pas de compte ? <span className="text-primary font-semibold cursor-pointer underline underline-offset-4 hover:underline-offset-8 transition-all duration-200">Crééz en un</span>
+                  Pas de compte ? <span className="text-primary font-semibold cursor-pointer underline underline-offset-4 hover:underline-offset-8 transition-all duration-200"><Link to={"/signup"}>Crééz en un</Link></span>
                 </p>
               </div>
             </div>
