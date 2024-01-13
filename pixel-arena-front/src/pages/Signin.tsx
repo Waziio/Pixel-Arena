@@ -1,7 +1,8 @@
-import { Button } from "@chakra-ui/react";
+import { Button } from "@/components/ui/button";
 import LeftBlock from "../components/Auth/LeftBlock";
-import MyInput from "../components/MyInput";
 import { Link } from "react-router-dom";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function Signin() {
   return (
@@ -11,22 +12,24 @@ export default function Signin() {
         <div id="right" className="w-1/2 flex justify-center items-center">
           <div id="login-container" className="h-3/4 w-full flex flex-col items-center">
             <div id="login-title-container" className="w-full h-1/4 flex justify-center items-center">
-              <h1 className="text-6xl font-light">Connexion</h1>
+              <h1 className="text-6xl">Connexion</h1>
             </div>
 
-            <div id="form-container" className="h-2/4 w-2/5 flex flex-col gap-10 justify-center">
-              <div id="email" className="">
-                <MyInput label={"Email"} type={"email"}></MyInput>
+            <div id="form-container" className="h-2/4 w-2/5 flex flex-col gap-14 justify-center">
+              <div id="email" className="grid w-full max-w-sm items-center gap-1.5">
+                <Label htmlFor="email">Adresse email</Label>
+                <Input id="email" type={"email"}></Input>
               </div>
 
-              <div id="pwd">
-                <MyInput label={"Mot de passe"} type={"password"}></MyInput>
+              <div id="pwd" className="grid w-full max-w-sm items-center gap-1.5">
+                <Label htmlFor="password">Mot de passe</Label>
+                <Input type={"password"}></Input>
               </div>
             </div>
 
             <div id="footer" className="h-1/4 w-full flex flex-col items-center justify-around mt-6">
               <div id="btn-container" className="h-20 flex justify-center items-center">
-                <Button fontSize={"large"} size={"lg"} rightIcon={<span className="material-symbols-outlined">login</span>} bg={"primary"} _hover={{ opacity: 0.8 }}>
+                <Button size={"lg"}>
                   Se connecter
                 </Button>
               </div>
